@@ -1,20 +1,11 @@
-/*
- * @Descripttion:
- * @version:
- * @Author: 小白
- * @Date: 2020-10-05 22:06:34
- * @LastEditors: 小白
- * @LastEditTime: 2022-02-17 00:14:09
- */
 import { White } from '@/typings';
 import { lazy } from 'react';
-const Search = lazy(() => import(/* chunkName: "Search" */ '@/pages/Search'));
-const List = lazy(() => import(/* chunkName: List */ '@/pages/List'));
+const User = lazy(() => import(/* chunkName: "Search" */ '@/pages/User'));
+// const List = lazy(() => import(/* chunkName: List */ '@/pages/List'));
 const Home = lazy(() => import(/* chunkName: Home */ '@/pages/Home'));
-const Detail = lazy(() => import(/* chunkName: Detail */ '@/pages/Detail'));
+const Owned = lazy(() => import(/* chunkName: Owned */ '@/pages/Owned'));
+const Receive = lazy(() => import(/* chunkName: Owned */ '@/pages/Receive'));
 const Index = lazy(() => import(/* chunkName: Index */ '@/pages/Index'));
-const Other = lazy(() => import(/* chunkName: Other */ '@/pages/Other'));
-const Other1 = lazy(() => import(/* chunkName: Other1 */ '@/pages/Other1'));
 const NoFound = lazy(
   () => import(/* chunkName: NoFound */ '../components/NoFound'),
 );
@@ -24,25 +15,25 @@ export const TabBarList: White.RouteTabBar[] = [
     component: Home,
     icon: 'white-home1',
     sceneMode: 'scroll',
-    title: '首页',
+    title: '商城',
   },
   {
-    path: '/detail',
-    component: Detail,
+    path: '/owned',
+    component: Owned,
     icon: 'white-tradingdata',
     sceneMode: 'scroll',
-    title: '详情',
+    title: '已拥有',
   },
+  // {
+  //   path: '/list',
+  //   component: List,
+  //   icon: 'white-order',
+  //   sceneMode: 'scroll',
+  //   title: '统计',
+  // },
   {
-    path: '/list',
-    component: List,
-    icon: 'white-order',
-    sceneMode: 'scroll',
-    title: '统计',
-  },
-  {
-    path: '/search',
-    component: Search,
+    path: '/user',
+    component: User,
     icon: 'white-account',
     sceneMode: 'scroll',
     title: '我的',
@@ -56,17 +47,8 @@ const routes: White.RouteConfig[] = [
     tabBars: TabBarList,
   },
   {
-    path: '/other',
-    component: Other,
-  },
-  {
-    path: '/other1',
-    sceneMode: 'bottom',
-    component: Other1,
-  },
-  {
-    path: '/dcotorDetail',
-    component: Detail,
+    path: '/receive',
+    component: Receive,
   },
   {
     path: '*',

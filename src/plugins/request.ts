@@ -1,13 +1,6 @@
 import { Toast } from 'antd-mobile';
 import axios, { AxiosRequestConfig } from 'axios';
-/*
- * @Descripttion:
- * @version:
- * @Author: 小白
- * @Date: 2020-10-04 13:11:29
- * @LastEditors: 小白
- * @LastEditTime: 2022-01-18 21:45:04
- */
+
 import { getAuth, setAuth } from './../utils/index';
 
 axios.defaults.timeout = 1000 * 10;

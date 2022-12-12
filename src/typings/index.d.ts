@@ -2,14 +2,7 @@ import { ComponentClass, FunctionComponent, ReactNode } from 'react';
 import { RouteProps } from 'react-router-dom';
 import { CSSTransitionProps } from 'react-transition-group/CSSTransition';
 
-/*
- * @Descripttion: 小白命名空间
- * @version: 0.0.1
- * @Author: 小白
- * @Date: 2020-10-10 20:50:06
- * @LastEditors: 小白
- * @LastEditTime: 2021-11-13 13:17:13
- */
+
 export namespace White {
   // route
 

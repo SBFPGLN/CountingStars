@@ -1,11 +1,4 @@
-/*
- * @Descripttion: 工具类
- * @version:
- * @Author: 小白
- * @Date: 2020-10-04 13:11:40
- * @LastEditors: 小白
- * @LastEditTime: 2022-02-16 23:53:34
- */
+
 export const setAuth = (auth: string) => {
   window.localStorage.setItem('auth', auth);
 };
